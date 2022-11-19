@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+{%extends 'testapp/base.html' %}
+
+{%load static%}
+{% block head_block%}
+
+<link rel='stylesheet' href="{% static "css/pyn.css" %}">
+{%endblock%}
+
+{%block body_block%}
+<div class="gs">
+<div class="w3-panel w3-info intro">
+<h2>Learn Python</h2>
+<p>Python is a popular programming language.</p>
+<p>Python can be used on a server to create web applications.</p>
+<a class="w3-btn w3-margin-bottom" href="python_intro.asp" style="font-size: 18px;padding-left:25px;padding-right:25px;font-family: 'Source Sans Pro', sans-serif;margin-top:6px;">Start learning Python now &raquo;</a>
+</div>
+<hr>
+
+<h2>Learning by Examples</h2>
+<p>With our &quot;Try it Yourself&quot; editor, you can edit Python code and view the result.</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate pythonHigh">
+print("Hello, World!")
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.asp?filename=demo_default">Try it Yourself &raquo;</a>
+</div>
+
+<p><b>Click on the &quot;Try it Yourself&quot; button to see how it works.</b></p>
+<hr>
+
+<h2>Python File Handling</h2>
+<p>In our File Handling section you will learn how to open, read, write, and
+delete files.</p>
+<p><a href="python_file_handling.asp">Python File Handling</a></p>
+<hr>
+
+<h2>Python Database Handling</h2>
+<p>In our database section you will learn how to access and work with MySQL and MongoDB databases:</p>
+<p><a href="python_mysql_getstarted.asp">Python MySQL Tutorial</a></p>
+
+<p><a href="python_mongodb_getstarted.asp">Python MongoDB Tutorial</a></p>
+
+<hr>
+
+<h2>Python Exercises</h2>
+<form autocomplete="off" id="w3-exerciseform" action="exercise.asp?filename=exercise_syntax1" method="post" target="_blank">
+<h2>Test Yourself With Exercises</h2>
+<div class="exercisewindow">
+<h2>Exercise:</h2>
+<p>Insert the missing part of the code below to output "Hello World".</p>
+<div class="exerciseprecontainer">
+<pre>
+<input name="ex1" maxlength="5" style="width: 54px;">("Hello World")
+</pre>
+</div>
+<br>
+<button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+<p><a target="_blank" href="exercise.asp?filename=exercise_syntax1">Start the Exercise</a></p>
+</div>
+</form>
+
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <div id="adngin-mid_content-0"></div>
+
+</div>
+<hr>
+
+<h2>Python Examples</h2>
+<p>Learn by examples! This tutorial supplements all explanations with clarifying examples.</p>
+<p><a href="python_examples.asp" class="w3-button w3-light-grey w3-round">See All Python Examples</a></p>
+<hr>
+
+<h2>Python Quiz</h2>
+<p>Test your Python skills with a quiz.</p>
+<p><a href="python_quiz.asp" class="w3-button w3-blue w3-round">Python Quiz</a></p>
+<hr>
+<style>
+#img_mylearning {
+  max-width:100%;
+}
+</style>
+<h2>My Learning</h2>
+
+<a class="w3-btn" id="courses_get_started_btn"
+href="https://shop.w3schools.com/collections/course-catalog" target="_blank">Get started</a>
+</div>
+<script>
+switch (subjectFolder) {
+  case "cpp":
+    subjectText = "C++";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/c-course-1";
+    break;
+  case "java":
+    subjectText = "Java";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/java-course";
+    break;
+  case "bootstrap4":
+    subjectText = "Bootstrap 4";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/bootstrap-4-course";
+    break;
+  case "xml":
+    subjectText = "XML";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/xml-course";
+    break;
+  case "jquery":
+    subjectText = "jQuery";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/jquery-course";
+    break;
+  case "accessibility":
+    subjectText = "Accessibility";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/accessibility-course";
+    break;
+  case "bootstrap":
+    subjectText = "Bootstrap 3";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/bootstrap-course";
+    break;
+  case "html":
+    subjectText = "HTML";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/html-course";
+    break;
+  case "tags":
+    subjectText = "HTML";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/html-course";
+    break;
+  case "css":
+    subjectText = "CSS";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/css-course";
+    break;
+  case "cssref":
+    subjectText = "CSS";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/css-course";
+    break;
+  case "js":
+    subjectText = "JavaScript";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/javascript-course";
+    break;
+  case "jsref":
+    subjectText = "JavaScript";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/javascript-course";
+    break;
+  case "react":
+    subjectText = "React.js";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/react-js-course";
+    break;
+  case "sql":
+    subjectText = "SQL";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/sql-course";
+    break;
+  case "python":
+    subjectText = "Python";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/python-course";
+    break;
+  case "php":
+    subjectText = "PHP";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/php-course";
+    break;
+  case "cybersecurity":
+    subjectText = "Cyber Security";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/cyber-security-course";
+    break;
+  case "r":
+    subjectText = "R";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/r-course";
+    break;
+  case "numpy":
+    subjectText = "Numpy";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/numpy-course";
+    break;
+  case "pandas":
+    subjectText = "Pandas";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/pandas-course";
+    break;
+  case "cs":
+    subjectText = "C#";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog/products/c-course";
+    break;
+  default:
+    subjectText = "a";
+    subjectLink = "https://shop.w3schools.com/collections/course-catalog";
+}
+if (subjectText != "a") {
+  document.getElementById("courses_subject_text").innerHTML = "a " + subjectText + "<br>";
+  document.getElementById("courses_subject_img_link").href = subjectLink;
+  document.getElementById("courses_get_started_btn").href = subjectLink;
+}
+</script>
+
+<!--
+<div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
+<a href="https://shop.w3schools.com/" target="_blank" title="Buy W3Schools Merchandize">
+  <img src="/images/tshirt.jpg" style="max-width:100%;">
+</a>
+</div>
+-->
+
+<div class="sidesection" id="moreAboutSubject">
+</div>
+
+<!--
+<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
+  <div class="w3-container w3-text-white">
+    <h4>Exercises</h4>
+  </div>
+  <div>
+    <div class="w3-light-grey">
+      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
+      <a target="_blank" href="/css/exercise.asp">CSS</a>
+      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
+      <a target="_blank" href="/sql/exercise.asp">SQL</a>
+      <a target="_blank" href="/php/exercise.asp">PHP</a>
+      <a target="_blank" href="/python/exercise.asp">Python</a>
+      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
+      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="sidesection codegameright ws-turquoise" style="font-size:18px;font-family: 'Source Sans Pro', sans-serif;border-radius:5px;color:#FFC0C7;padding-top:12px;margin-left:auto;margin-right:auto;max-width:230px;">
+<style>
+.codegameright .w3-btn:link,.codegameright .w3-btn:visited {
+  background-color:#04AA6D;
+  border-radius:5px;
+}
+.codegameright .w3-btn:hover,.codegameright .w3-btn:active {
+  background-color:#059862!important;
+  text-decoration:none!important;
+}
+</style>
+  <h4><a href="/codegame/index.html" class="w3-hover-text-black">CODE GAME</a></h4>
+  <a href="/codegame/index.html" target="_blank" class="w3-hover-opacity"><img style="max-width:100%;margin:16px 0;" src="/images/w3lynx_200.png" alt="Code Game" loading="lazy"></a>
+  <a class="w3-btn w3-block ws-black" href="/codegame/index.html" target="_blank" style="padding-top:10px;padding-bottom:10px;margin-top:12px;border-top-left-radius: 0;border-top-right-radius: 0">Play Game</a>
+</div>
+
+<!--
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="/howto/default.asp" class="w3-hover-text-white">HOW TO</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="/howto/howto_js_tabs.asp">Tabs</a><br>
+    <a href="/howto/howto_css_dropdown.asp">Dropdowns</a><br>
+    <a href="/howto/howto_js_accordion.asp">Accordions</a><br>
+    <a href="/howto/howto_js_sidenav.asp">Side Navigation</a><br>
+    <a href="/howto/howto_js_topnav.asp">Top Navigation</a><br>
+    <a href="/howto/howto_css_modals.asp">Modal Boxes</a><br>
+    <a href="/howto/howto_js_progressbar.asp">Progress Bars</a><br>
+    <a href="/howto/howto_css_parallax.asp">Parallax</a><br>
+    <a href="/howto/howto_css_login_form.asp">Login Form</a><br>
+    <a href="/howto/howto_html_include.asp">HTML Includes</a><br>
+    <a href="/howto/howto_google_maps.asp">Google Maps</a><br>
+    <a href="/howto/howto_js_rangeslider.asp">Range Sliders</a><br>
+    <a href="/howto/howto_css_tooltip.asp">Tooltips</a><br>
+    <a href="/howto/howto_js_slideshow.asp">Slideshow</a><br>
+    <a href="/howto/howto_js_sort_list.asp">Sort List</a><br>
+  </div>
+</div>
+-->
+
+<!--
+<div class="sidesection w3-round" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container ws-black" style="border-top-right-radius:5px;border-top-left-radius:5px;">
+    <h5><a href="/cert/default.asp" class="w3-hover-text-white">Certificates</a></h5>
+  </div>
+  <div class="w3-border" style="border-bottom-right-radius:5px;border-bottom-left-radius:5px;">
+  <a href="/cert/cert_html.asp" class="w3-button ws-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
+  <a href="/cert/cert_css.asp" class="w3-button ws-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
+  <a href="/cert/cert_javascript.asp" class="w3-button ws-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
+  <a href="/cert/cert_frontend.asp" class="w3-button ws-grey w3-block w3-border-bottom" style="text-decoration:none">Front End</a>
+  <a href="/cert/cert_python.asp" class="w3-button ws-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
+  <a href="/cert/cert_sql.asp" class="w3-button ws-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
+  <a href="/cert/default.asp" class="w3-button ws-grey w3-block" style="text-decoration:none;">And more</a>
+  </div>
+</div>
+-->
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+
+      <div id="adngin-sidebar_sticky-0"></div>
+        <script>
+        function secondSnigel() {
+          if(window.adngin && window.adngin.adnginLoaderReady) {
+            if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+              } else {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              }
+            } else {
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+              }
+            }
+          } else {
+            window.addEventListener('adnginLoaderReady', function() {
+              if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+                } else {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+                }
+              } else {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+                }
+              }
+            });
+          }
+        }
+      </script>
+
+    </div>
+  </div>
+</div>
+
+<script>
+uic_r_c()
+</script>
+
+</div>
+</div>
+<div id="footer" class="footer w3-container w3-white">
+
+<hr>
+
+<div style="overflow:auto">
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="adngin-bottom_left-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="adngin-bottom_right-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  </div>
+</div>
+
+<hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px;">
+<div class="w3-col l3 m3 s12">
+<a class="w3-btn ws-black w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:17px;font-family:Source Sans Pro, sans-serif;">Report Error</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-btn ws-black w3-block w3-round" href="https://www.w3schools.com/spaces/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:17px;font-family:Source Sans Pro, sans-serif;">Spaces</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-btn ws-black w3-block w3-round" href="/pro/index.php" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:17px;font-family:Source Sans Pro, sans-serif;">Pro</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-btn ws-black w3-block w3-round" href="https://shop.w3schools.com/collections/certifications" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:17px;font-family:Source Sans Pro, sans-serif;">Get Certified</a>
+</div>
+
+</div>
+<hr>
+<div class="ws-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+
+<h2>Report Error</h2>
+
+<p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+<p>help@w3schools.com</p>
+<br>
+
+<!--
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-section">
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">
+<label for="err_email">Page address:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+-->
+
+</div>
+<div class="w3-container ws-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Tutorials</h5>
+<a href="/html/default.asp">HTML Tutorial</a><br>
+<a href="/css/default.asp">CSS Tutorial</a><br>
+<a href="/js/default.asp">JavaScript Tutorial</a><br>
+<a href="/howto/default.asp">How To Tutorial</a><br>
+<a href="/sql/default.asp">SQL Tutorial</a><br>
+<a href="/python/default.asp">Python Tutorial</a><br>
+<a href="/w3css/default.asp">W3.CSS Tutorial</a><br>
+<a href="/bootstrap/bootstrap_ver.asp">Bootstrap Tutorial</a><br>
+<a href="/php/default.asp">PHP Tutorial</a><br>
+<a href="/java/default.asp">Java Tutorial</a><br>
+<a href="/cpp/default.asp">C++ Tutorial</a><br>
+<a href="/jquery/default.asp">jQuery Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top References</h5>
+<a href="/tags/default.asp">HTML Reference</a><br>
+<a href="/cssref/default.asp">CSS Reference</a><br>
+<a href="/jsref/default.asp">JavaScript Reference</a><br>
+<a href="/sql/sql_ref_keywords.asp">SQL Reference</a><br>
+<a href="/python/python_reference.asp">Python Reference</a><br>
+<a href="/w3css/w3css_references.asp">W3.CSS Reference</a><br>
+<a href="/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap Reference</a><br>
+<a href="/php/php_ref_overview.asp">PHP Reference</a><br>
+<a href="/colors/colors_names.asp">HTML Colors</a><br>
+<a href="/java/java_ref_keywords.asp">Java Reference</a><br>
+<a href="/angular/angular_ref_directives.asp">Angular Reference</a><br>
+<a href="/jquery/jquery_ref_overview.asp">jQuery Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h5 style="font-family: 'Source Sans Pro', sans-serif;">Top Examples</h5>
+<a href="/html/html_examples.asp">HTML Examples</a><br>
+<a href="/css/css_examples.asp">CSS Examples</a><br>
+<a href="/js/js_examples.asp">JavaScript Examples</a><br>
+<a href="/howto/default.asp">How To Examples</a><br>
+<a href="/sql/sql_examples.asp">SQL Examples</a><br>
+<a href="/python/python_examples.asp">Python Examples</a><br>
+<a href="/w3css/w3css_examples.asp">W3.CSS Examples</a><br>
+<a href="/bootstrap/bootstrap_examples.asp">Bootstrap Examples</a><br>
+<a href="/php/php_examples.asp">PHP Examples</a><br>
+<a href="/java/java_examples.asp">Java Examples</a><br>
+<a href="/xml/xml_examples.asp">XML Examples</a><br>
+<a href="/jquery/jquery_examples.asp">jQuery Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<!--
+<h4>Web Certificates</h4>
+<a href="/cert/default.asp">HTML Certificate</a><br>
+<a href="/cert/default.asp">CSS Certificate</a><br>
+<a href="/cert/default.asp">JavaScript Certificate</a><br>
+<a href="/cert/default.asp">SQL Certificate</a><br>
+<a href="/cert/default.asp">Python Certificate</a><br>
+<a href="/cert/default.asp">PHP Certificate</a><br>
+<a href="/cert/default.asp">Bootstrap Certificate</a><br>
+<a href="/cert/default.asp">XML Certificate</a><br>
+<a href="/cert/default.asp">jQuery Certificate</a><br>
+<a href="//www.w3schools.com/cert/default.asp" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+Get Certified &raquo;</a>
+-->
+
+<a href="https://shop.w3schools.com/collections/course-catalog" target="_blank"><h5 style="font-family: 'Source Sans Pro', sans-serif;">Get Certified</h5></a>
+<a href="https://campus.w3schools.com/collections/certifications/products/html-certificate" target="_blank">HTML Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/css-certificate" target="_blank">CSS Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/javascript-certificate" target="_blank">JavaScript Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/front-end-certificate" target="_blank">Front End Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/sql-certificate" target="_blank">SQL Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/python-certificate" target="_blank">Python Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/php-certificate" target="_blank">PHP Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/jquery-certificate" target="_blank">jQuery Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/java-certificate" target="_blank">Java Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/c-certificate" target="_blank">C++ Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/c-certificate-1" target="_blank">C# Certificate</a><br>
+<a href="https://campus.w3schools.com/collections/certifications/products/xml-certificate" target="_blank">XML Certificate</a><br>
+<!--<a href="https://shop.w3schools.com/collections/course-catalog" target="_blank" class="w3-button w3-margin-top ws-black ws-hover-black w3-round" style="text-decoration:none;font-size:16px;font-family:Source Sans Pro, sans-serif;">
+Get Certified &#10095;</a>-->
+
+</div>
+</div>
+</div>
+
+<hr>
+<div class="w3-opacity" style="font-size:12px;text-align:right;margin-bottom:16px;margin-right:8px;">
+    <a href="/forum/default.asp" target="_blank" class="xw3-text-grey xw3-hover-text-black" style="text-decoration:none" title="Forum">FORUM</a> |
+    <a href="/about/default.asp" target="_top" class="xw3-text-grey xw3-hover-text-black" style="text-decoration:none" title="About W3Schools">ABOUT</a>
+</div>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using W3Schools, you agree to have read and accepted our <a href="/about/about_copyright.asp">terms of use</a>,
+<a href="/about/about_privacy.asp">cookie and privacy policy</a>.<br><br>
+<a href="/about/about_copyright.asp">Copyright 1999-2022</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="//www.w3schools.com/w3css/default.asp">W3Schools is Powered by W3.CSS</a>.<br><br>
+</div>
+<div class="w3-center w3-small">
+<a href="//www.w3schools.com">
+    <i class="fa fa-logo ws-text-green ws-hover-text-green" style="position:relative;font-size:42px!important;"></i>
+</div>
+<br><br>
+</div>
+</div>
+</div>
+<script src="/lib/w3schools_footer.js?update=20220202"></script>
+
+<script>
+  MyLearning.loadUser('footer');
+  function docReady(fn) {
+    document.addEventListener("DOMContentLoaded", fn);
+    if (document.readyState === "interactive" || document.readyState === "complete" ) {
+      fn();
+    }
+  }
+  uic_r_z();
+  uic_r_d()
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+{%endblock%}

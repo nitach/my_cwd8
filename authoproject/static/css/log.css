@@ -1,0 +1,14 @@
+body{
+background:gray;
+
+}
+.navbar{
+  background:black  ;
+  clor:blue;
+}
+a{
+color:white!important;
+}
+.vertical{
+border-left:1px solid black;
+}
